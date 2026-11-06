@@ -1,0 +1,38 @@
+{
+  "tool": "Promo Scout",
+  "version": "1.0.1",
+  "mode": "offline",
+  "model": null,
+  "generated_at": "2026-11-06T03:51:11Z",
+  "runtime_seconds": 0.008,
+  "input_episodes": 1,
+  "parsed_episodes": 1,
+  "expected_episodes": null,
+  "full_pack_complete": true,
+  "candidate_count": 36,
+  "selected_count": 3,
+  "errors": [],
+  "model_errors": [],
+  "coverage": [
+    {
+      "episode": 1,
+      "source": "episode-001.txt",
+      "sha256": "e640730e957904d37208d113e02a164b3f3a3e5402469d9b39633a840b4819df",
+      "duration_seconds": 55.0,
+      "parsed_events": 13,
+      "candidate_count": 36,
+      "mode": "offline",
+      "parser_warnings": []
+    }
+  ],
+  "posting_queue_ids": [
+    "E001-000000-002900"
+  ],
+  "limitations": [
+    "Offline scores are keyword heuristics, not a trained model or conversion prediction.",
+    "Continuous clips only; no montage search.",
+    "Script timing requires verification against video.",
+    "No audience validation; loglines excluded from standalone scoring.",
+    "Every result needs editorial approval."
+  ]
+}

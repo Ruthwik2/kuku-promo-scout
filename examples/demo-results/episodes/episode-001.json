@@ -1,0 +1,258 @@
+{
+  "episode": 1,
+  "source": "episode-001.txt",
+  "sha256": "e640730e957904d37208d113e02a164b3f3a3e5402469d9b39633a840b4819df",
+  "duration_seconds": 55.0,
+  "parsed_events": 13,
+  "candidate_count": 36,
+  "mode": "offline",
+  "parser_warnings": [],
+  "promos": [
+    {
+      "id": "E001-000000-002900",
+      "episode": 1,
+      "segments": [
+        {
+          "episode": 1,
+          "start": "00:00.00",
+          "end": "00:29.00",
+          "start_seconds": 0.0,
+          "end_seconds": 29.0
+        }
+      ],
+      "duration_seconds": 29.0,
+      "score": 44.4,
+      "score_type": "heuristic_not_probability",
+      "dimensions": {
+        "hook": 2.0,
+        "cliffhanger": 2,
+        "standalone": 1.65,
+        "pace": 4.9
+      },
+      "hook": {
+        "event_id": "E001-B000",
+        "timestamp": "00:00.00",
+        "text": "\"My husband died last winter.\""
+      },
+      "cliffhanger": {
+        "event_id": "E001-B007",
+        "timestamp": "00:26.00",
+        "text": "\"Who brought it to you?\""
+      },
+      "why": "Opening signal 2.0/5; unresolved-ending signal 2.0/5; relationship/stakes context 1.6/5. Editor must confirm narrative meaning.",
+      "flags": [
+        "May need prior story context"
+      ],
+      "transcript": [
+        {
+          "event_id": "E001-B000",
+          "speaker": "TENANT",
+          "start": "00:00.00",
+          "end": "00:03.00",
+          "text": "\"My husband died last winter.\""
+        },
+        {
+          "event_id": "E001-B002",
+          "speaker": "OFFICER",
+          "start": "00:04.00",
+          "end": "00:08.00",
+          "text": "\"Then who signed this order yesterday?\""
+        },
+        {
+          "event_id": "E001-B003",
+          "speaker": "TENANT",
+          "start": "00:09.00",
+          "end": "00:13.00",
+          "text": "\"That cannot be his signature. Let me see.\""
+        },
+        {
+          "event_id": "E001-B005",
+          "speaker": "TENANT",
+          "start": "00:17.00",
+          "end": "00:21.00",
+          "text": "\"He always drew a small star after his name.\""
+        },
+        {
+          "event_id": "E001-B006",
+          "speaker": "OFFICER",
+          "start": "00:22.00",
+          "end": "00:25.00",
+          "text": "\"There is a star on this order.\""
+        },
+        {
+          "event_id": "E001-B007",
+          "speaker": "TENANT",
+          "start": "00:26.00",
+          "end": "00:29.00",
+          "text": "\"Who brought it to you?\""
+        }
+      ],
+      "source_event_ids": [
+        "E001-B000",
+        "E001-B001",
+        "E001-B002",
+        "E001-B003",
+        "E001-B004",
+        "E001-B005",
+        "E001-B006",
+        "E001-B007"
+      ],
+      "review_status": "needs_editor_review"
+    },
+    {
+      "id": "E001-002200-004700",
+      "episode": 1,
+      "segments": [
+        {
+          "episode": 1,
+          "start": "00:22.00",
+          "end": "00:47.00",
+          "start_seconds": 22.0,
+          "end_seconds": 47.0
+        }
+      ],
+      "duration_seconds": 25.0,
+      "score": 17.3,
+      "score_type": "heuristic_not_probability",
+      "dimensions": {
+        "hook": 0.5,
+        "cliffhanger": 0,
+        "standalone": 1.65,
+        "pace": 3.6
+      },
+      "hook": {
+        "event_id": "E001-B006",
+        "timestamp": "00:22.00",
+        "text": "\"There is a star on this order.\""
+      },
+      "cliffhanger": {
+        "event_id": "E001-B010",
+        "timestamp": "00:38.00",
+        "text": "Both turn toward the locked door as it slowly opens from the inside."
+      },
+      "why": "Opening signal 0.5/5; unresolved-ending signal 0.0/5; relationship/stakes context 1.6/5. Editor must confirm narrative meaning.",
+      "flags": [
+        "Weak opening hook",
+        "Weak or resolved ending",
+        "May need prior story context"
+      ],
+      "transcript": [
+        {
+          "event_id": "E001-B006",
+          "speaker": "OFFICER",
+          "start": "00:22.00",
+          "end": "00:25.00",
+          "text": "\"There is a star on this order.\""
+        },
+        {
+          "event_id": "E001-B007",
+          "speaker": "TENANT",
+          "start": "00:26.00",
+          "end": "00:29.00",
+          "text": "\"Who brought it to you?\""
+        },
+        {
+          "event_id": "E001-B008",
+          "speaker": "OFFICER",
+          "start": "00:30.00",
+          "end": "00:35.00",
+          "text": "\"A man with a scar. He said you would understand.\""
+        },
+        {
+          "event_id": "E001-B011",
+          "speaker": "TENANT",
+          "start": "00:44.00",
+          "end": "00:47.00",
+          "text": "\"Only my husband had that key.\""
+        }
+      ],
+      "source_event_ids": [
+        "E001-B006",
+        "E001-B007",
+        "E001-B008",
+        "E001-B009",
+        "E001-B010",
+        "E001-B011"
+      ],
+      "review_status": "needs_editor_review"
+    },
+    {
+      "id": "E001-001300-003800",
+      "episode": 1,
+      "segments": [
+        {
+          "episode": 1,
+          "start": "00:13.00",
+          "end": "00:38.00",
+          "start_seconds": 13.0,
+          "end_seconds": 38.0
+        }
+      ],
+      "duration_seconds": 25.0,
+      "score": 11.2,
+      "score_type": "heuristic_not_probability",
+      "dimensions": {
+        "hook": 0,
+        "cliffhanger": 0,
+        "standalone": 1.0,
+        "pace": 3.6
+      },
+      "hook": {
+        "event_id": "E001-B004",
+        "timestamp": "00:13.00",
+        "text": "She snatches the paper and compares it to the signature inside her wedding ring box."
+      },
+      "cliffhanger": {
+        "event_id": "E001-B008",
+        "timestamp": "00:30.00",
+        "text": "\"A man with a scar. He said you would understand.\""
+      },
+      "why": "Opening signal 0.0/5; unresolved-ending signal 0.0/5; relationship/stakes context 1.0/5. Editor must confirm narrative meaning.",
+      "flags": [
+        "Hook line extends beyond first 3 seconds; verify delivery",
+        "Weak opening hook",
+        "Weak or resolved ending",
+        "May need prior story context"
+      ],
+      "transcript": [
+        {
+          "event_id": "E001-B005",
+          "speaker": "TENANT",
+          "start": "00:17.00",
+          "end": "00:21.00",
+          "text": "\"He always drew a small star after his name.\""
+        },
+        {
+          "event_id": "E001-B006",
+          "speaker": "OFFICER",
+          "start": "00:22.00",
+          "end": "00:25.00",
+          "text": "\"There is a star on this order.\""
+        },
+        {
+          "event_id": "E001-B007",
+          "speaker": "TENANT",
+          "start": "00:26.00",
+          "end": "00:29.00",
+          "text": "\"Who brought it to you?\""
+        },
+        {
+          "event_id": "E001-B008",
+          "speaker": "OFFICER",
+          "start": "00:30.00",
+          "end": "00:35.00",
+          "text": "\"A man with a scar. He said you would understand.\""
+        }
+      ],
+      "source_event_ids": [
+        "E001-B004",
+        "E001-B005",
+        "E001-B006",
+        "E001-B007",
+        "E001-B008",
+        "E001-B009"
+      ],
+      "review_status": "needs_editor_review"
+    }
+  ]
+}

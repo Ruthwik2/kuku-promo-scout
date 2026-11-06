@@ -1,0 +1,61 @@
+EPISODE NUMBER: Episode 1
+EPISODE LOGLINE: Original synthetic example. A tenant discovers an eviction order signed by someone she thought was dead.
+
+--- SCRIPT START ---
+SCENE 01
+Scene heading: INT. APARTMENT HALLWAY - NIGHT
+Scene start: 00:00.00
+Scene end: 00:55.00
+
+**TENANT:**
+Start: (00:00.00) | End: (00:03.00)
+"My husband died last winter."
+
+**CAMERA:**
+Start: (00:00.00) | End: (00:08.00)
+A woman holds an eviction notice outside her locked apartment.
+
+**OFFICER:**
+Start: (00:04.00) | End: (00:08.00)
+"Then who signed this order yesterday?"
+
+**TENANT:**
+Start: (00:09.00) | End: (00:13.00)
+"That cannot be his signature. Let me see."
+
+**ACTION:**
+Start: (00:13.00) | End: (00:17.00)
+She snatches the paper and compares it to the signature inside her wedding ring box.
+
+**TENANT:**
+Start: (00:17.00) | End: (00:21.00)
+"He always drew a small star after his name."
+
+**OFFICER:**
+Start: (00:22.00) | End: (00:25.00)
+"There is a star on this order."
+
+**TENANT:**
+Start: (00:26.00) | End: (00:29.00)
+"Who brought it to you?"
+
+**OFFICER:**
+Start: (00:30.00) | End: (00:35.00)
+"A man with a scar. He said you would understand."
+
+**SOUND FX:**
+Start: (00:36.00) | End: (00:38.00)
+A key turns inside the apartment door.
+
+**ACTION:**
+Start: (00:38.00) | End: (00:43.00)
+Both turn toward the locked door as it slowly opens from the inside.
+
+**TENANT:**
+Start: (00:44.00) | End: (00:47.00)
+"Only my husband had that key."
+
+**CAMERA:**
+Start: (00:47.00) | End: (00:55.00)
+A shadow appears behind the opening door. Cut before the person's face is visible.
+--- SCRIPT END ---
