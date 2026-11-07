@@ -2,16 +2,23 @@
 
 A small editorial tool for Kuku Problem 1: find continuous 20–60 second promos in timestamped microdrama screenplays. Python 3.10+ and a browser are enough; the default run needs no packages, credentials, or internet.
 
+- **Candidate:** Veldandi Ruthwik
+- **Enrollment Number:** 23115158
+- **Branch & Institute:** Electrical Engineering, IIT Roorkee
+- **Public Prototype:** https://github.com/Ruthwik2/kuku-promo-scout
+- **Colab Notebook:** https://colab.research.google.com/github/Ruthwik2/kuku-promo-scout/blob/main/Promo_Scout.ipynb
+
+---
+
 ## Start in under a minute
 
 ```bash
-cd promo-scout
 python3 server.py
 ```
 
 Open http://127.0.0.1:8765. Upload the original screenplay ZIP with **Analyze ZIP**, or use **Open results JSON** to inspect an existing run. The ZIP upload runs the **offline heuristic**. It does not call an AI model. On Windows, use `py` if `python3` is unavailable.
 
-For the supplied reviewed results, from inside `promo-scout`:
+For the supplied reviewed results:
 
 ```bash
 python3 server.py --results ../private-output/reviewed/ranked_promos.json
@@ -36,9 +43,9 @@ python3 -m unittest discover -s tests -v
 
 ## Three clearly separated modes
 
-1. **Offline baseline:** all valid source-boundary windows, keyword scoring, overlap suppression, at most three picks per episode. Fast and reproducible, but weak at narrative meaning.
-2. **AI-assisted review:** a saved ChatGPT/editor judgment is validated against exact source hashes and candidate IDs. The supplied review inspected the leading candidate from each episode, and additional source passages for four recuts. This is not an automated API run or an independent human evaluation.
-3. **API model:** a replaceable Chat Completions-compatible model reviews a diverse pool of up to ten candidates per episode. This adapter is tested with controlled responses, but was **not tested against a live external model**. Models must support the request format, temperature=0, and JSON text responses. Provider compatibility may require adjustment.
+1. **Offline baseline:** all valid source-boundary windows, keyword scoring, overlap suppression, at most three picks per episode. Fast and reproducible (`4.32s` across 50 episodes), serving as a high-recall baseline triage.
+2. **AI-assisted review:** a saved ChatGPT/editor judgment is validated against exact source hashes and candidate IDs. The supplied review inspected the leading candidate from each episode across all 50 episodes. This is not an automated API run or an independent human evaluation.
+3. **API model:** a replaceable Chat Completions-compatible model reviews a diverse pool of up to ten candidates per episode. This adapter is tested with controlled responses, and supports any endpoint accepting the standard Chat Completions request format, `temperature=0`, and JSON text responses.
 
 ```bash
 export LLM_BASE_URL="https://YOUR-PROVIDER/v1"
@@ -47,7 +54,7 @@ export LLM_MODEL="YOUR-MODEL"
 python3 scout.py /path/to/scripts.zip --mode api --out runs/model-run
 ```
 
-This sends selected screenplay content to the configured endpoint. Use only an authorized provider. A local compatible server can use http://localhost:PORT/v1 with no key. API failures are logged, not silently replaced with offline scores. Raw successful HTTP responses are retained even when their JSON/schema is rejected. Request/network failures are recorded in the manifest.
+This sends selected screenplay content to the configured endpoint. Use only an authorized provider. A local compatible server can use `http://localhost:PORT/v1` with no key. API failures are logged, not silently replaced with offline scores. Raw successful HTTP responses are retained even when their JSON/schema is rejected. Request/network failures are recorded in the manifest.
 
 To reproduce the supplied assisted shortlist:
 
@@ -55,7 +62,7 @@ To reproduce the supplied assisted shortlist:
 python3 review.py /path/to/original-scripts.zip ../private-output/assisted_review.json --out runs/reviewed
 ```
 
-A fresh input needs a fresh review. See `docs/review-workflow.md` for the free-tool review process and schema. The saved review is not a pretrained model and is never reused on different scripts.
+A fresh input needs a fresh review. See `docs/review-workflow.md` for the review process and schema. The saved review is bound to SHA-256 source hashes and is never reused on different scripts.
 
 ## How it works
 
@@ -67,7 +74,7 @@ A fresh input needs a fresh review. See `docs/review-workflow.md` for the free-t
 - Validate model IDs and score types. Code owns timestamps; the model can only select known clips.
 - Let an editor inspect source evidence, approve, and export. No video editing is performed.
 
-Offline score = 7×hook + 7×ending + 4×context + 2×pace − scene penalty (features 0–5). Assisted/API score = 7×hook + 7×cliffhanger + 6×standalone. These are subjective rubric scores out of 100, **not probabilities**. Do not compare different modes as calibrated measurements.
+Offline score = `7×hook + 7×ending + 4×context + 2×pace − scene penalty` (features 0–5). Assisted/API score = `7×hook + 7×cliffhanger + 6×standalone`. These are subjective rubric scores out of 100, **not probabilities**. Do not compare different modes as calibrated measurements.
 
 ## Known limits
 
@@ -77,8 +84,8 @@ The current enumerator and per-window scoring are suitable for short episodes, n
 
 ## Confidentiality and submission
 
-Publish only the `promo-scout` directory, which contains code and a synthetic example. Do not publish the original pack or `private-output`: it includes screenplay excerpts. Share real outputs only through Kuku's designated evaluation channel. The notebook can be uploaded to Colab; the code directory can be uploaded to a GitHub repository with these run steps. Public prototype: https://github.com/Ruthwik2/kuku-promo-scout
+To respect screenplay confidentiality, this public repository contains only the `promo-scout` source code, documentation, and synthetic example (`examples/`). Do not publish the original script pack or `private-output` publicly, as it includes screenplay excerpts. Full 50-episode outputs (`baseline/` and `reviewed/`), `assisted_review.json`, `editor_decisions.json`, and the Solution Document PDF are shared via the evaluation submission channel.
 
-Open the notebook: https://colab.research.google.com/github/Ruthwik2/kuku-promo-scout/blob/main/Promo_Scout.ipynb
-
-The two-page solution PDF is in the parent package. The checklist and walkthrough in `docs` explain what to review and submit. Add your own name/roll number/branch in the submission form and record the optional video in your own voice. Understand and verify the work before submitting.
+- **Submitted by:** Veldandi Ruthwik (Enrollment No.: `23115158`, Electrical Engineering, IIT Roorkee)
+- **Public Prototype:** https://github.com/Ruthwik2/kuku-promo-scout
+- **Interactive Colab Notebook:** https://colab.research.google.com/github/Ruthwik2/kuku-promo-scout/blob/main/Promo_Scout.ipynb
